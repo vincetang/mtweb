@@ -1,0 +1,14 @@
+scp -r -i ~/.ssh/vince_mbp.pem public/css/creative.css resources/views/index.blade.php ubuntu@ec2-52-7-165-160.compute-1.amazonaws.com:~
+
+
+ssh -i ~/.ssh/vince_mbp.pem ubuntu@52.7.165.160
+
+sudo rm /var/www/mt_web/public/css/creative.css
+
+sudo rm /var/www/mt_web/resources/views/index.blade.php 
+
+sudo mv creative.css /var/www/mt_web/public/css/
+
+sudo mv index.blade.php /var/www/mt_web/resources/views/
+
+sudo chmod -R 777 /var/www/mt_web/
